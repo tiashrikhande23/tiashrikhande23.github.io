@@ -236,6 +236,27 @@ body.lensed .job.hit, body.lensed .case.hit, body.lensed .act.hit { box-shadow: 
 .about-text { display: grid; gap: 16px; max-width: 62ch; font-size: 1.0625rem; }
 .about-text p:first-child { font-family: var(--font-display); font-size: var(--step-2); line-height: 1.3; letter-spacing: -0.01em; }
 
+/* on repeat: a record that spins while hovered */
+.repeat {
+  display: flex; align-items: center; gap: 16px; width: fit-content; max-width: 100%;
+  padding: 12px 20px 12px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line);
+}
+.vinyl {
+  flex: none; width: 56px; height: 56px; border-radius: 50%; position: relative;
+  background: repeating-radial-gradient(circle, var(--ink) 0 2px, #2d3c34 2px 3px);
+  animation: spin 3.2s linear infinite; animation-play-state: paused;
+}
+.vinyl::after {
+  content: ""; position: absolute; inset: 35%; border-radius: 50%; background: var(--peach);
+  box-shadow: inset 0 0 0 4px var(--butter);
+}
+.repeat:hover .vinyl { animation-play-state: running; }
+.repeat .eyebrow { font-size: 0.6875rem; }
+.repeat b { display: block; font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.repeat small { color: var(--muted); font-size: 0.8125rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .repeat:hover .vinyl { animation-play-state: paused; } }
+
 /* contact */
 .contact { padding-block: 96px 64px; text-align: left; position: relative; }
 .contact h2 { font-size: var(--step-4); font-weight: 800; letter-spacing: -0.045em; line-height: 0.95; }
@@ -390,8 +411,12 @@ footer { padding-block: 24px 40px; border-top: 1px solid var(--line); color: var
       <div class="about-text">
         <p>I'm happiest somewhere between the code and the people it's for.</p>
         <p>I got into computer science because I like building things, and I added a business minor because I kept wanting to know who those things were for. That's why my projects usually start with a question I can't stop thinking about. Do companies lowball their earnings guidance on purpose? How does an independent producer know a sample is safe to use? For the second one, I didn't stop at the code. I went and talked to ten producers to find out what they actually needed.</p>
-        <p>Outside of code, it's music, mostly punk rock. I always have something playing while I work, and it's no coincidence that one of my projects ended up being built for music producers.</p>
+        <p>Outside of code, it's music, mostly punk and post-punk. I always have something playing while I work, and it's no coincidence that one of my projects ended up being built for music producers.</p>
         <p>These days I'm also a course assistant for CS 222, helping student teams ship their first real software projects, which is easily one of my favorite parts of the week. If you want to talk AI, markets, or swap song recommendations, feel free to reach out.</p>
+        <div class="repeat">
+          <span class="vinyl" aria-hidden="true"></span>
+          <div><span class="eyebrow">On repeat</span><b>The Cure</b><small>post-punk, if we're being technical</small></div>
+        </div>
       </div>
     </div>
   </section>
