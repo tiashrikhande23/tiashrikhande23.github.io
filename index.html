@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Tia Shrikhande: Computer Science student at UIUC. Experience, projects and contact.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%234f5fe8'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3Et%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232f7a58'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' fill='white' text-anchor='middle'%3Et%3C/text%3E%3C/svg%3E">
 <style>body{margin:0} img{max-width:100%} [hidden]{display:none!important}</style>
 <title>Tia Shrikhande</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,21 +14,21 @@
 /* Layout: an airy, light-only page. Soft pastel shapes drift behind the hero; a sticky "hiring for" bar lights up the work that fits each role. */
 :root {
   color-scheme: light;
-  --bg: #f6f7fc;
+  --bg: #f3f5f0;
   --surface: #ffffff;
-  --ink: #1f2443;
-  --muted: #5f6687;
-  --line: #e2e5f2;
-  --accent: #4f5fe8;
-  --accent-soft: #eceefe;
-  --peach: #ffc4a3;
-  --mint: #a8e6cf;
-  --butter: #ffe59e;
-  --lilac: #d6c8ff;
-  --sky: #b7d4ff;
-  --syn-green: #1f8f6a;
-  --syn-purple: #7a56d1;
-  --syn-orange: #c25621;
+  --ink: #1c2a23;
+  --muted: #5b6b62;
+  --line: #dde3da;
+  --accent: #2f7a58;
+  --accent-soft: #e2ede6;
+  --peach: #f0cfae;
+  --mint: #b9d6c3;
+  --butter: #f3dcc4;
+  --lilac: #cdd9d2;
+  --sky: #c4d0de;
+  --syn-green: #2f7a58;
+  --syn-purple: #3d5a80;
+  --syn-orange: #b5562c;
   --font-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", "Helvetica Neue", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -105,12 +105,12 @@ a { color: var(--accent); text-underline-offset: 3px; }
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .btn.ghost { background: var(--surface); color: var(--ink); border-color: var(--line); }
-.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px -8px rgba(31, 36, 67, 0.35); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px -8px rgba(28, 42, 35, 0.35); }
 
 /* ---------- lens bar ---------- */
 .lens {
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
-  background: rgba(246, 247, 252, 0.9);
+  background: rgba(243, 245, 240, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
   margin-inline: -20px; padding: 12px 20px;
@@ -164,7 +164,7 @@ mark { background: var(--butter); color: inherit; border-radius: 3px; padding: 0
   background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 24px 28px;
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 200px); gap: 8px 32px;
 }
-body.lensed .job.hit, body.lensed .case.hit, body.lensed .act.hit { box-shadow: 0 0 0 2px var(--accent), 0 14px 30px -18px rgba(31, 36, 67, 0.35); }
+body.lensed .job.hit, body.lensed .case.hit, body.lensed .act.hit { box-shadow: 0 0 0 2px var(--accent), 0 14px 30px -18px rgba(28, 42, 35, 0.35); }
 .job-main { min-width: 0; }
 .job .when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; }
 .job h3 { font-size: var(--step-2); font-weight: 600; letter-spacing: -0.02em; margin-top: 4px; }
@@ -193,7 +193,7 @@ body.lensed .job.hit, body.lensed .case.hit, body.lensed .act.hit { box-shadow: 
 .meter-row .lbl { color: var(--muted); }
 .meter-row .bar { height: 10px; border-radius: 6px; background: var(--accent-soft); overflow: hidden; }
 .meter-row .bar i { display: block; height: 100%; background: var(--accent); border-radius: 6px; width: var(--v); transform-origin: left; }
-.meter-row.base .bar i { background: #b9bed6; }
+.meter-row.base .bar i { background: #c3ccc5; }
 .meter-row .val { font-family: var(--font-mono); text-align: right; font-variant-numeric: tabular-nums; }
 .case .tags { margin-top: auto; padding-top: 18px; }
 
@@ -228,7 +228,7 @@ body.lensed .job.hit, body.lensed .case.hit, body.lensed .act.hit { box-shadow: 
 .avatar {
   aspect-ratio: 1; max-width: 100%; border-radius: 42% 58% 52% 48% / 48% 44% 56% 52%;
   background: linear-gradient(135deg, var(--peach), var(--lilac) 55%, var(--sky));
-  display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 4.5rem; color: var(--surface);
+  display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 4.5rem; color: var(--accent);
   letter-spacing: -0.04em; transition: border-radius 1s ease;
 }
 .avatar:hover { border-radius: 55% 45% 40% 60% / 45% 60% 40% 55%; }
@@ -614,7 +614,7 @@ input.addEventListener("keydown", e => { if (e.key === "Escape") grep("", true);
 const toast = document.getElementById("toast");
 function confetti(x, y) {
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const colors = ["#ffc4a3", "#a8e6cf", "#ffe59e", "#d6c8ff", "#b7d4ff", "#4f5fe8"];
+  const colors = ["#f0cfae", "#b9d6c3", "#f3dcc4", "#3d5a80", "#b5562c", "#2f7a58"];
   for (let i = 0; i < 28; i++) {
     const p = document.createElement("span");
     p.className = "confetti";
